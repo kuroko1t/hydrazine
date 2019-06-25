@@ -2,7 +2,7 @@
 	\author Gregory Diamos <gregory.diamos@gatech.edu>
 	\date   Thursday March 17, 2011
 	\brief  The header file containing ELF file definitions.
-	
+
 	See the document 'ELF-64 Object File Format Version 1.5 Draft 2 (May 1998)'
 	for details.
 */
@@ -14,7 +14,7 @@ namespace hydrazine
 {
 
 /*! \brief A namespace for ELF file types */
-namespace elf 
+namespace elf
 {
 
 // basic types
@@ -182,12 +182,18 @@ enum {
   SHT_PREINIT_ARRAY = 16, // Pointers to pre-init functions.
   SHT_GROUP         = 17, // Section group.
   SHT_SYMTAB_SHNDX  = 18, // Indicies for SHN_XINDEX entries.
-  SHT_LOOS          = 0x60000000, // Lowest operating system-specific type.
-  SHT_HIOS          = 0x6fffffff, // Highest operating system-specific type.
-  SHT_LOPROC        = 0x70000000, // Lowest processor architecture-specific type.
-  SHT_HIPROC        = 0x7fffffff, // Highest processor architecture-specific type.
-  SHT_LOUSER        = 0x80000000, // Lowest type reserved for applications.
-  SHT_HIUSER        = 0xffffffff  // Highest type reserved for applications.
+  //SHT_LOOS          = 0x60000000, // Lowest operating system-specific type.
+  //SHT_HIOS          = 0x6fffffff, // Highest operating system-specific type.
+  //SHT_LOPROC        = 0x70000000, // Lowest processor architecture-specific type.
+  //SHT_HIPROC        = 0x7fffffff, // Highest processor architecture-specific type.
+  //SHT_LOUSER        = 0x80000000, // Lowest type reserved for applications.
+  //SHT_HIUSER        = 0xffffffff  // Highest type reserved for applications.
+  SHT_LOOS          = 19, // Lowest operating system-specific type.
+  SHT_HIOS          = 20, // Highest operating system-specific type.
+  SHT_LOPROC        = 21, // Lowest processor architecture-specific type.
+  SHT_HIPROC        = 22, // Highest processor architecture-specific type.
+  SHT_LOUSER        = 23, // Lowest type reserved for applications.
+  SHT_HIUSER        = 24  // Highest type reserved for applications.
 };
 
 // Section flags.
@@ -380,4 +386,3 @@ enum {
 } // end hydrazine
 
 #endif
-
